@@ -1,0 +1,682 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+@font-face{
+  font-family: 'Annie Use Your Telescope';
+  src: url("annieUseYourTelescope-Regular.ttf") format('truetype');
+  font-display: fallback;
+}
+
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+font-family: 'Quicksand', sans-serif;
+height: 100vh;
+width: 100vw;
+overflow-x: hidden;
+}
+
+span{
+  color: #a16d15;
+  font-weight: bold;
+}
+
+.material-icons{
+  color: gainsboro;
+  font-size: 1.8rem;
+  margin: 20px 0;
+}
+
+
+/* Background section */
+
+
+.background-image{
+  height: 100vh;
+  background-image: url("images/buddha_mainbg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: border-box;
+  filter: grayscale(30%) brightness(90%);
+  position: relative;
+  animation: scale 1.5s ease;
+}
+
+.title{
+  display: inline-block;
+}
+
+.title p{
+  font-family: 'Annie Use Your Telescope', cursive;
+  position: absolute;
+  text-align: right;
+  width: 80%;
+  top: 80%;
+  transform: translateY(-80%);
+  right: 5%;
+  font-size: 1.5rem;
+  color: lightgray;
+  text-shadow: 1px 1px 1px black;
+  white-space:pre-wrap;
+}
+
+/* Nav section */
+
+
+header{
+  background: linear-gradient(to top, rgba(0,0,0,.4) 20%, rgba(0,0,0,.8) 100%);
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+.logo{
+  font-weight: bold;
+  margin-left: 40px;
+
+}
+.logo a{
+  list-style: none;
+  text-decoration: none;
+  color: gainsboro;
+}
+
+
+.main-nav_items{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 3rem;
+
+}
+
+.main-nav_item{
+  padding: 30px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  display: none;
+}
+
+.main-nav_items li a,
+.mobile-nav-item a{
+  color: gainsboro;
+  list-style: none;
+  text-decoration: none;
+}
+
+.main-nav_items li a:hover,
+.main-nav_items li a:active,
+.mobile-nav-item a:hover,
+.mobile-nav-item a:active{
+  color: #a16d15;
+  transition: .2s;
+}
+
+/* Mobile NAV */
+
+.mobile-nav{
+  display: none;
+  position: fixed;
+  z-index: 105;
+  top: 0;
+  left: 0;
+  background: linear-gradient(150deg, rgba(0,0,0,1) 50%, transparent 140%);
+  width: 100%;
+  height: 100vh;
+  animation: move 1s ease;
+  overflow: hidden;
+}
+
+.mobile-nav-items{
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-nav-item{
+  margin: 1rem 0;
+
+}
+
+.mobile-nav-item a{
+  font-size: 1.5rem;
+}
+
+
+
+/* Hamburger menu*/
+
+
+.toggle-button{
+  width: 3rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding-top: 0;
+  padding-bottom: 0;
+  vertical-align: middle;
+
+}
+
+.toggle-button:focus{
+  outline: none;
+}
+
+.toggle-button-bar{
+  width: 100%;
+  height: .2rem;
+  background: white;
+  display: block;
+  margin: 0.6rem 0;
+  border-radius: 90%;
+  position: relative;
+  top: 0;
+  right: 1rem;
+}
+
+
+
+/* About section */
+main{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-image: linear-gradient(rgba(0,0,0,1), transparent 130% ), url("images/buddha.jpg");
+  background-position: center;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-sections{
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.about-picture img{
+  max-width: 300px;
+  box-shadow: -30px -30px #7d5015;
+
+}
+
+.about-info{
+  display: inline-block;
+  width: 80%;
+}
+
+.about-info h1{
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  color: #a16d15;
+  width: 90%;
+  margin-top: 3rem;
+  text-align: left;
+  font-size: 1.6rem;
+}
+
+.about-info p{
+  color: #999;
+  text-align: justify;
+  line-height: 1.8rem;
+}
+.about-info a{
+  text-decoration: none;
+  color: #a16d15;
+  font-weight: bold;
+}
+
+
+
+
+/* About*/
+
+.about-sections_about{
+  padding-bottom: 3rem;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+  color: #999;
+  background: linear-gradient(rgba(0,0,0,1), transparent 130% ), url("images/buddha.jpg");
+  background-origin: border-box;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background-image_about{
+  height: 100vh;
+  background-image:linear-gradient(to bottom, rgba(0,0,0,.5) 90%, rgba(0,0,0,.7) 10%),url("images/matt-mu-OaKRXa1tlUI-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: border-box;
+  filter: grayscale(10%);
+  animation: scale 1.5s ease;
+}
+
+.title_buddhism p{
+  font-family: 'Annie Use Your Telescope', cursive;
+  position: absolute;
+  display: inline-block;
+  text-align: right;
+  width: 60%;
+  top: 80%;
+  transform: translateY(-80%);
+  right: 5%;
+  font-size: 1.5rem;
+  color:lightgray;
+  text-shadow: 1px 1px 1px black;
+
+  
+}
+
+
+.about-sections .about-info-title{
+  color: lightgray;
+
+}
+
+ .about-info-title_image{
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem 0 0;
+  box-shadow: 5px 5px 6px 0px black;
+  filter: brightness(70%);
+}
+
+
+
+/* Watermark */
+
+.background-buddha{
+  position: relative;
+  text-align: center;
+}
+
+.background-buddha img{
+  width: 40%;
+  opacity: .3;
+}
+
+
+
+
+/* Contact section*/
+
+
+.signup-page{
+  background: none;
+}
+
+
+
+.background-image_contact{
+  height: 100vh;
+  background: linear-gradient(to top, rgba(5,22,21,.8) 20%, rgba(0,0,0,.1) 100%), url("images/patrick-connor-klopf-ZNMcI9DtSWQ-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-clip: border-box;
+  filter: grayscale(50%);
+  box-shadow: 1px 1px 14px 1px gray;
+}
+
+.signup-form input:focus,
+.signup-form select:focus{
+  outline: none;
+}
+
+.signup-form{
+  padding: 2rem; 
+}
+
+.signup-form a{
+  text-decoration: none;
+  color: #2c4632;
+}
+
+.signup-title{
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.signup-page input,
+.signup-page label,
+.signup-page select{
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+ font-family: 'Quicksand', sans-serif;
+}
+input{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid gray;
+  border-width: thin;
+  font-size: 1rem;
+  color: #2c4632;
+
+}
+
+.signup-page button{
+  display: block;
+  width: 20%;
+  font-family: 'Quicksand', sans-serif;
+  border: 1px solid gray;
+  background-color: white;
+  padding: .5rem;
+  margin: 2.2rem 0 0 0;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+
+.signup-page button:hover,
+.signup-page button:active{
+  background-color: #2c4632;
+  color: gainsboro;
+  box-shadow: 0px 4px 10px 0px gray;
+}
+
+.signup-page input[id*="terms"],
+.signup-page input[id*="terms"] + label{
+  width: auto;
+  display: inline-block;
+  margin: 2rem 0 0 0;
+}
+
+.signup-intro{
+  padding-bottom: 1rem;
+  line-height: 1.8rem;
+}
+
+#stronger{
+  color: #9d7a1d;
+}
+
+
+/* Gallery section */
+
+.background-image_gallery{
+  height: 100vh;
+  background: linear-gradient(to top right, rgba(5,22,21,.97) 10%, rgba(0,0,0,.1) 80%), url("images/buddhahome.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  filter: grayscale(20%);
+  box-shadow: 1px 1px 14px 1px gray;
+}
+
+.gallery_container{
+  width: 80%;
+  margin: auto;
+  background: none;
+}
+
+.row {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  filter: grayscale(100%);
+  box-shadow: 1px 1px 4px 0px black;
+  border-radius: 10px;
+}
+
+.column img:hover{
+  transform: scale(1.01);
+  filter: grayscale(0);
+  transition: .4s ease-in-out;
+
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+
+
+
+/* Footer section */
+
+
+.footer-container{
+  background-color: black;
+  color: #999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 2rem;
+  padding: 2rem 0;
+}
+
+
+.reference_a{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0 0 0;
+  text-decoration: none;
+}
+.reference_a a{
+  color: #a16d15;
+  font-size: .9rem;
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.info_email{
+  color: #a16d15;
+  font-size: .9rem;
+}
+
+.footer-container span{
+  color: #a16d15;
+  font-size: .9rem;
+}
+
+.footer-container a{
+  text-decoration: none;
+}
+
+
+/* Responsive */
+
+
+@media(min-width: 50rem){
+  .background-image{
+    height: 70vh;
+    background-image: linear-gradient(to top, rgba(0,0,0,.9), rgba(0,0,0,.1) 10%),  url("images/buddha_mainbg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+    filter: grayscale(30%) brightness(80%);
+    position: relative;
+  }
+  .background-image_gallery{
+    height: 70vh;
+  }
+  .background-image_about{
+  height: 70vh;
+  background-image: url("images/matt-mu-OaKRXa1tlUI-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: border-box;
+  filter: grayscale(40%);
+  animation: scale 1.5s ease;
+     }
+  .about-picture img{
+    display: inline-block;
+    margin-right: 3rem;
+    width: 20%;
+    box-shadow: -30px -30px #7d5015;
+    vertical-align: middle;
+  }
+  .header{
+    margin-top: 0;
+  }
+  .about-info{
+    width: 50%;
+    vertical-align: middle;
+    margin-top: 0;
+  }
+  .about-info h1{
+    width: 45%;
+    margin-top: 0;
+    font-size: 1.7rem;
+  }
+
+  .title p{
+    width: 35%;
+    font-size: 1.3rem;
+  }
+  .title_buddhism p{
+    width: 30%;
+    font-size: 1.3rem;
+  }
+  .background-buddha{
+  position: relative;
+
+}
+  .about-info-title_image{
+  margin-bottom: 2rem;
+
+  }
+
+  .background-buddha img{
+  position: absolute;
+  bottom: 90px;
+  right: 150px;
+  width: 30%;
+  opacity: .1;
+  }
+  .toggle-button{
+    display: none;
+  }
+  .main-nav_item{
+    display: flex;
+  }
+
+  .main-nav_item:hover{
+    animation: scale .2s;
+  }
+  .material-icons{
+  margin: 0;
+}
+
+  .background-image_contact{
+  height: 70vh;
+}
+  .signup-form{
+    margin: auto;
+    width: 50%;
+  }
+  .footer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: baseline;
+    
+  }
+  .reference{
+    padding-bottom: 2rem;
+    width: 100%;
+  }
+  .info{
+    width: 100%;
+  }
+}
+
+
+/* Animations */
+
+@keyframes scale{
+  0%{
+    transform: scale(1.1);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+@keyframes mobile {
+    0%{
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes move{
+    0%{
+    opacity: 0;
+    transform: translateX(-20rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+    
+  }
+}
